@@ -1,0 +1,36 @@
+// _variables.scss
+// =================
+@import "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700";
+@include border-box-sizing; //uses border box sizing like the old IE...sweet.
+
+$red    : #EF314B;
+$dark   : #000000;
+$light  : #FFFFFF;
+
+$backgroundColor : $dark;
+$typeDefault     : $light;
+$navType         : #CCCCCC;
+$navHover        : $light;
+
+//Font variables
+$fontfamily : 'Lato', 'Open Sans', Helvetica, Arial,  sans-serif;
+
+$thin   : 300;
+$normal : 400;
+$bold   : 600;
+$heavy  : 800;
+
+$headFont : $thin 1.5em/1.5em $fontfamily;
+$mainFont : $thin 1em/1.5em $fontfamily;
+$headColor: lighten($red,20);
+
+//Breakpoint variables
+$narrow: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+//z-indexes
+$zmiddle: 8888;
+$ztop: 9999;
+$zbottom: 1;

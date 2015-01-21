@@ -1,0 +1,249 @@
+@import "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 1em/1.5em "Lato", "Open Sans", Helvetica, Arial, sans-serif;
+  background: #000000;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: 300 1.5em/1.5em "Lato", "Open Sans", Helvetica, Arial, sans-serif;
+  color: #f6909e;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  position: relative;
+  padding: 20px 0;
+}
+.scene article {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scene article:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 1200px) {
+  .scene {
+    padding: 40px 0;
+  }
+}
+@media (min-width: 960px) {
+  .scene article {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scene article:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/*-------------------------------------------------------------
+			         Responsive Navigation 
+--------------------------------------------------------------*/
+.navbar-collapsed #header {
+  transform: translate(0px, 0px);
+}
+
+#header {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  z-index: 1;
+  transform: translate(250px, 0px);
+  transition: transform 0.28s ease-in-out 0s;
+}
+#header:before, #header:after {
+  content: "";
+  display: table;
+}
+#header:after {
+  clear: both;
+}
+#header a {
+  outline: 0;
+  text-decoration: none;
+}
+
+.brand {
+  display: block;
+  line-height: 1;
+  font-weight: 400;
+}
+.brand:hover {
+  text-decoration: none;
+}
+.brand span {
+  font-size: 1.6rem;
+}
+.brand .brand-tagline {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #4d4d4d;
+  text-align: center;
+}
+
+.navbar-toggle {
+  padding: 18px;
+  background: #EF314B;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+.navbar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #EF314B;
+  height: 100%;
+  width: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.navbar-menu li a {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  color: #FFFFFF;
+  padding: 1em 1em;
+  border-top: 1px solid #f36074;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+}
+.navbar-menu li a:hover {
+  color: #FFFFFF;
+  border-bottom: 3px solid #EF314B;
+}
+
+/*-------------------------------------------------------------
+			             Main Content
+--------------------------------------------------------------*/
+.navbar-collapsed #content {
+  transform: translate(0px, 0px);
+}
+
+#content {
+  height: 1000px;
+  background: #000000;
+  transform: translate(250px, 0px);
+  transition: transform 0.28s ease-in-out 0s;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #content {
+    width: 1200px;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+  #content:before, #content:after {
+    content: "";
+    display: table;
+  }
+  #content:after {
+    clear: both;
+  }
+
+  .navbar-menu {
+    float: none;
+    width: 1200px;
+    height: auto;
+    position: static;
+    margin: 0 auto;
+  }
+  .navbar-menu li {
+    display: inline-block;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
